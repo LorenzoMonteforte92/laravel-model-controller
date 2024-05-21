@@ -15,6 +15,7 @@ class PageController extends Controller
     public function cinema() {
 
         $movies = Movie::all();
+        
         $data = [
             'movies' => $movies,
         ];
