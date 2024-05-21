@@ -9,14 +9,17 @@ use App\Models\Movie;
 class PageController extends Controller
 {
     public function index() {
+        return view('home');
+    }
+
+    public function cinema() {
 
         $movies = Movie::all();
-        dd($movies);
         $data = [
             'movies' => $movies,
         ];
 
-        return view('home', $data);
+        return view('cinema', $data);
     }
 
 }
